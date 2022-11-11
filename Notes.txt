@@ -1,0 +1,30 @@
+DESIGN SYSTEM
+
+Color - Pretty easy and understandable and self explanatory
+Typography - Simple enough, talks about headings and body text sizes
+Interactive Elements - A bit more complex but with enough time not too big of an issue to solve
+
+
+Challenges Overview
+
+--- Horizontal scrolling of trending ---
+https://raddy.dev/blog/netflix-carousel-using-css/
+https://www.cssscript.com/netflix-image-carousel/
+https://www.youtube.com/watch?v=b--q6Fsf_cA
+https://blog.hubspot.com/website/horizontal-scrolling
+https://www.youtube.com/watch?v=yq4BeRtUHbk best one i've seen so far
+
+
+Components Overview
+  Header - Icons + User Profile Stuff
+  Search bar - Icon + Input field
+  Trending - Refer to above Horizontal scrolling Challenge
+  Movie - Individual Movie 
+
+
+Pages
+  Home
+    Home Search
+  Movies
+  TV Series
+  Bookmarked Movies
