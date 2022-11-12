@@ -29,7 +29,7 @@
   transition: 250ms ease-in;
   fill: var(--svg-menu-default);
 }
-.nav .nav-item svg:hover{
+.nav-item svg:hover{
   transform: scale(1.2);
   fill: var(--red)
 }
@@ -38,4 +38,8 @@
   height: 24px;
   width: 24px;
   cursor: pointer;
+}
+
+.nav-item .active {
+  fill: #FFF;
 }
