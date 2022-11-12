@@ -13,6 +13,7 @@
 
 .logo {
   display: flex;
+  cursor: pointer;
 }
 
 .nav ul {
@@ -23,10 +24,18 @@
 .nav-item {
   margin: 0 10px;
   cursor: pointer;
-  
+}
+.nav-item svg {
+  transition: 250ms ease-in;
+  fill: var(--svg-menu-default);
+}
+.nav .nav-item svg:hover{
+  transform: scale(1.2);
+  fill: var(--red)
 }
 
 .user img {
   height: 24px;
   width: 24px;
+  cursor: pointer;
 }
