@@ -1,0 +1,32 @@
+.navigation {
+  background-color: var(--semi-dark-blue);
+  height: 55px;
+  display: flex;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.logo {
+  display: flex;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  
+}
+.nav-item {
+  margin: 0 10px;
+  cursor: pointer;
+  
+}
+
+.user img {
+  height: 24px;
+  width: 24px;
+}
