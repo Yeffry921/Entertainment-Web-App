@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 .logo {
@@ -19,17 +19,16 @@
 .nav ul {
   list-style-type: none;
   display: flex;
-  
 }
 .nav-item {
   margin: 0 10px;
   cursor: pointer;
 }
 .nav-item svg {
-  transition: 250ms ease-in;
+  transition: 200ms ease-in;
   fill: var(--svg-menu-default);
 }
-.nav-item svg:hover{
+.nav-item:hover .logo{
   transform: scale(1.2);
   fill: var(--red)
 }
@@ -42,4 +41,39 @@
 
 .nav-item .active {
   fill: #FFF;
+}
+
+@media only screen and (min-width: 768px) {
+  .navigation {
+    margin: 23px 25px;
+    border-radius: 10px;
+    height: 65px;
+  }
+  .user img {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .navigation {
+    height: auto;
+    align-items: stretch;
+  }
+  .navigation .content {
+    flex-direction: column;
+    justify-content: initial;
+  }
+  .navigation .nav {
+    margin-top: 4.5rem;
+  }
+  .nav ul {
+    flex-direction: column;
+  }
+  .nav .nav-item {
+    margin: 1rem 0;
+  }
+  .navigation .user {
+    margin-top: auto;
+  }
 }
