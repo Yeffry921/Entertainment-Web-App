@@ -19,28 +19,44 @@ const Navigation = () => {
             <li className={styles["nav-item"]}>
               <NavLink to="home">
                 {({ isActive }) => (
-                  <HomeLogo className={isActive ? styles.active : undefined} />
+                  <HomeLogo
+                    className={`${isActive ? styles.active : undefined} ${
+                      styles.logo
+                    }`}
+                  />
                 )}
               </NavLink>
             </li>
             <li className={styles["nav-item"]}>
               <NavLink to="movies">
                 {({ isActive }) => (
-                  <MovieLogo className={isActive ? styles.active : undefined} />
+                  <MovieLogo
+                    className={`${isActive ? styles.active : undefined} ${
+                      styles.logo
+                    }`}
+                  />
                 )}
               </NavLink>
             </li>
             <li className={styles["nav-item"]}>
               <NavLink to="tvseries">
                 {({ isActive }) => (
-                  <TvLogo className={isActive ? styles.active : undefined} />
+                  <TvLogo
+                    className={`${isActive ? styles.active : undefined} ${
+                      styles.logo
+                    }`}
+                  />
                 )}
               </NavLink>
             </li>
             <li className={styles["nav-item"]}>
               <NavLink to="bookmarks">
                 {({ isActive }) => (
-                  <Bookmarks className={isActive ? styles.active : undefined} />
+                  <Bookmarks
+                    className={`${isActive ? styles.active : undefined} ${
+                      styles.logo
+                    }`}
+                  />
                 )}
               </NavLink>
             </li>
