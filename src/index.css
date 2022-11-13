@@ -4,7 +4,7 @@
   --greyish-blue: hsl(223, 23%, 46%);
   --dark-blue: hsl(223, 30%, 9%);
   --semi-dark-blue: hsl(223, 36%, 14%);
-  --svg-menu-default: #5A698F;
+  --svg-menu-default: #5a698f;
   --font-light: 300;
   --font-medium: 500;
   --text-sm: 13px;
@@ -20,4 +20,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--dark-blue);
+  /* font-family: 'Outfit', sans-serif; */
 }
