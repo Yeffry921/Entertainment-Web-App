@@ -1,6 +1,13 @@
+import Search from "../../components/Search/Search"
+import Row from "../../Row"
+import styles from '../Home/Home.module.css'
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <section className={styles.container}>
+      <Search />
+      <Row />
+    </section>
   )
 }
 
