@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px;
+  margin: 0 10px;
 }
 
 .logo {
@@ -45,7 +45,7 @@
 
 @media only screen and (min-width: 768px) {
   .navigation {
-    margin: 23px 25px;
+    margin: 20px 25px;
     border-radius: 10px;
     height: 65px;
   }
@@ -59,10 +59,14 @@
   .navigation {
     height: auto;
     align-items: stretch;
+    margin: 20px 25px;
+
   }
   .navigation .content {
     flex-direction: column;
     justify-content: initial;
+    margin: 0;
+    padding: 20px 15px;
   }
   .navigation .nav {
     margin-top: 4.5rem;
