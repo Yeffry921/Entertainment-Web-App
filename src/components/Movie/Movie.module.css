@@ -1,0 +1,25 @@
+.movie-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 240px;
+  margin-right: 1.5rem;
+}
+
+.movie {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+}
+
+@media only screen and(min-width: 768px) {
+  .movie-container {
+    width: 470px;
+  }
+}
+@media only screen and(min-width: 1024px) {
+  .movie-container {
+    width: 280px;
+  }
+}
