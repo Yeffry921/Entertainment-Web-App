@@ -17,7 +17,7 @@ const Navigation = () => {
         <nav className={styles.nav}>
           <ul>
             <li className={styles["nav-item"]}>
-              <NavLink to="home">
+              <NavLink to="/">
                 {({ isActive }) => (
                   <HomeLogo
                     className={`${isActive ? styles.active : undefined} ${
