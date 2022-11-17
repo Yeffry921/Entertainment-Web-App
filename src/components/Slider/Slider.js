@@ -5,7 +5,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "./Slider.module.css";
 
 const Slider = () => {
-  const [movies, setMovies] = useState(data);
+  const [movies, setMovies] = useState(data.filter((movie) => movie.isTrending));
   const slideLeft = () => {
     var slider = document.getElementById("slider");
     console.log(slider)
