@@ -67,4 +67,7 @@ input[type="search"]:focus {
   .content {
     margin: 0;
   }
+  .container {
+    margin-top: 35px;
+  }
 }
