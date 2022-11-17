@@ -1,4 +1,10 @@
 .container {
   flex: 1 0;
-  margin: 20px 15px;
+  /* margin: 20px 15px; */
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    overflow: hidden;
+  }
 }
