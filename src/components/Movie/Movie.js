@@ -6,7 +6,7 @@ const Movie = ({ item }) => {
     <div className={styles['movie-container']}>
       <img
         className={styles.movie}
-        src={item.thumbnail.trending?.small}
+        src={item.thumbnail.trending?.large}
         alt={item?.title}
       />
     </div>
