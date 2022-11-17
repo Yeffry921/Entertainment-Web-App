@@ -5,7 +5,26 @@
   width: 240px;
   margin-right: 1.5rem;
 }
+.bookmark {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsla(223, 36%, 14%, 0.5);
+  cursor: pointer;
 
+}
+.bookmark:hover {
+  background-color: white;
+}
+.bookmark:hover .bookmark-icon{
+  fill: #000;
+}
+.bookmark .bookmark-icon {
+  display: block;
+}
 .movie {
   display: block;
   width: 100%;
