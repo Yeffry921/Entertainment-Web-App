@@ -28,3 +28,23 @@ Pages
   Movies
   TV Series
   Bookmarked Movies
+
+
+Current problem to solve
+
+- Not getting my index route to work fixed
+- Issue with image width not changing on tablet and desktops fixed
+- How to make movie component be as flexible as possible and not repeating myself
+
+
+Styles all movies should have
+
+- Hover styles that show button of play in the middle
+- All movies should have the bookmark icon
+- Hover effect icon
+- Active effect icon
+
+Differences
+
+- Trending films should have the info inside their content
+- Everything else should have info outside of their content
