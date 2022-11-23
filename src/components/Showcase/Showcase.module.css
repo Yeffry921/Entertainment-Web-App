@@ -4,6 +4,9 @@
   gap: 20px;
   margin: 0 10px;
 }
+.showcase-item {
+  position: relative;
+}
 
 img {
   width: 100%;
