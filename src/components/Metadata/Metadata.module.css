@@ -1,0 +1,41 @@
+.trending {
+  position: absolute;
+  left: 1rem;
+  bottom: .25rem;
+}
+.showcase {
+  position: static;
+}
+.movie-data ul {
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.movie-data span {
+  color: white;
+  font-size: var(--heading-xs);
+}
+.movie-data li {
+  font-weight: 300;
+  color: #D1D2D7;
+  font-size: var(--text-sm);
+}
+.movie-data li:first-child {
+  list-style: none;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .movie-data {
+    bottom: 1.2rem;
+  }
+  .movie-data span {
+    color: white;
+    font-size: var(--heading-s);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  
+}
