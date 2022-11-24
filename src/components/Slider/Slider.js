@@ -3,6 +3,7 @@ import Movie from "../Movie/Movie";
 import data from "../../data.json";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "./Slider.module.css";
+import ShowcaseHeading from "../ShowcaseHeading/ShowcaseHeading";
 
 const Slider = () => {
   const [movies, setMovies] = useState(data.filter((movie) => movie.isTrending));
@@ -17,7 +18,7 @@ const Slider = () => {
   };
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Trending</h1>
+      <ShowcaseHeading text="Trending" />
       <div className={styles["row-container"]}>
         <FiChevronLeft
           onClick={slideLeft}
