@@ -1,0 +1,6 @@
+.title {
+  color: var(--white);
+  font-size: var(--heading-m);
+  font-weight: var(--font-light);
+  margin: 1.5rem 0;
+}
