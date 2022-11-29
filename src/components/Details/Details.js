@@ -1,7 +1,7 @@
-import styles from "./Metadata.module.css";
+import styles from "./Details.module.css";
 import { BsDot } from "react-icons/bs";
 
-const Metadata = ({ item, isTrending }) => {
+const Details = ({ item, isTrending }) => {
   const activeClass = isTrending ? styles.trending : styles.showcase;
   return (
     <div className={`${styles["movie-data"]} ${activeClass}`}>
@@ -17,4 +17,4 @@ const Metadata = ({ item, isTrending }) => {
   );
 };
 
-export default Metadata;
+export default Details;
