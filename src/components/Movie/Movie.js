@@ -1,23 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Movie.module.css";
-import playSvgIcon from "../../assets/icon-play.svg";
 
-import Thumbnail from "../Thumbnail/Thumbnail";
-import Metadata from "../Metadata/Metadata";
+import Bookmark from "../Bookmark/Bookmark";
+import Details from "../Details/Details";
+import PlayButton from "../UI/PlayButton/PlayButton";
+import Overlay from "../UI/Overlay/Overlay";
+import Card from "../UI/Card/Card";
+import Image from "../UI/Image/Image";
 
-const Movie = ({ item }) => {
+const Movie = ({ item, image, title, trending, width }) => {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
   return (
-    <div className={styles["movie-container"]}>
-      <div className={styles.wrapper}>
-        <div className={styles.overlay}></div>
-        <Thumbnail item={item} />
-        <button className={styles["play-btn"]}>
-          <img src={playSvgIcon} alt="" />
-          <span>Play</span>
-        </button>
-        <Metadata item={item}/>
-      </div>
-    </div>
+    <Card mouseOver={handleMouseOver} mouseOut={handleMouseOut} {...width}>
+      {isHovering && (
+        <Overlay>
+          <PlayButton />
+        </Overlay>
+      )}
+      <Image title={title} image={image} />
+      <Bookmark item={item} />
+      <Details item={item} isTrending={trending} />
+    </Card>
   );
 };
 
