@@ -29,7 +29,10 @@
 .movie-data li:first-child {
   list-style: none;
 }
-
+.movie-data img {
+  width: 12px;
+  margin-right: .25rem;
+}
 
 @media only screen and (min-width: 768px) {
   .movie-data {
