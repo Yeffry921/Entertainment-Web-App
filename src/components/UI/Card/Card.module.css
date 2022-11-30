@@ -1,0 +1,18 @@
+.movie-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* .movie-container {
+    width: 450px;
+  } */
+}
+
+@media only screen and (min-width: 1024px) {
+  /* .movie-container {
+    width: 470px;
+  } */
+}
