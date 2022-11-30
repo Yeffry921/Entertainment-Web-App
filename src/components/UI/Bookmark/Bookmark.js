@@ -1,12 +1,16 @@
-import { FaRegBookmark } from "react-icons/fa";
-import styles from './Bookmark.module.css'
+import { FaRegBookmark, FaBookmark } from "react-icons/fa";
+import styles from "./Bookmark.module.css";
 // import playSvgIcon from "../../assets/icon-play.svg";
 
-const Bookmark = () => {
+const Bookmark = ({ isMarked }) => {
   return (
     <div className={styles.hover}>
       <button className={styles.bookmark}>
-        <FaRegBookmark fill="#fff" className={styles["bookmark-icon"]} />
+        {isMarked ? (
+          <FaBookmark fill="#FFF" className={styles["bookmark-icon"]} />
+        ) : (
+          <FaRegBookmark fill="#FFF" className={styles["bookmark-icon"]} />
+        )}
       </button>
     </div>
   );
