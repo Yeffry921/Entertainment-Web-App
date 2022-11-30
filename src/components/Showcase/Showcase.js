@@ -1,9 +1,10 @@
 import data from "../../data.json";
-import Bookmark from "../Bookmark/Bookmark";
-import Metadata from "../Metadata/Metadata";
 import ShowcaseHeading from "../ShowcaseHeading/ShowcaseHeading";
-
+import Movie from "../Movie/Movie";
 import styles from "./Showcase.module.css";
+import Card from "../UI/Card/Card";
+import Image from "../UI/Image/Image";
+import Details from "../UI/Details/Details";
 
 const Showcase = ({ title }) => {
   const recommended = data.filter((movie) => movie.isTrending === false);
@@ -13,12 +14,13 @@ const Showcase = ({ title }) => {
       <div className={styles.showcase}>
         {recommended.map((movie) => {
           return (
-            <div>
-              <div className={styles["showcase-item"]}>
-                <img src={movie.thumbnail.regular.large} alt="" />
-                <Bookmark />
-              </div>
-              <Metadata item={movie} isTrending={false} />
+            <div className={styles["showcase-item"]} key={movie.title}>
+              <Movie
+                image={movie.thumbnail.regular.large}
+                item={movie}
+                title={movie.title}
+              />
+              <Details isTrending={false} item={movie} />
             </div>
           );
         })}
