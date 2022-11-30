@@ -4,12 +4,15 @@ import data from "../../data.json";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "./Slider.module.css";
 import ShowcaseHeading from "../ShowcaseHeading/ShowcaseHeading";
+import Details from "../UI/Details/Details";
 
 const Slider = () => {
-  const [movies, setMovies] = useState(data.filter((movie) => movie.isTrending));
+  const [movies, setMovies] = useState(
+    data.filter((movie) => movie.isTrending)
+  );
   const slideLeft = () => {
     var slider = document.getElementById("slider");
-    console.log(slider)
+    console.log(slider);
     slider.scrollLeft = slider.scrollLeft - 700;
   };
   const slideRight = () => {
@@ -27,7 +30,15 @@ const Slider = () => {
         />
         <div id="slider" className={styles["slider-container"]}>
           {movies.map((item, id) => (
-            <Movie key={id} item={item} />
+            <div className={styles["slider-item"]} key={item.title}>
+              <Movie
+                item={item}
+                image={item.thumbnail.trending?.large}
+                title={item.title}
+                trending={true}
+              />
+              <Details isTrending={true} item={item} />
+            </div>
           ))}
         </div>
         <FiChevronRight
