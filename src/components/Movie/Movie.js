@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Movie.module.css";
 
 import Bookmark from "../Bookmark/Bookmark";
-import Details from "../Details/Details";
+import Details from "../UI/Details/Details";
 import PlayButton from "../UI/PlayButton/PlayButton";
 import Overlay from "../UI/Overlay/Overlay";
 import Card from "../UI/Card/Card";
@@ -20,7 +20,7 @@ const Movie = ({ item, image, title, trending, width }) => {
   };
 
   return (
-    <Card mouseOver={handleMouseOver} mouseOut={handleMouseOut} {...width}>
+    <Card mouseOver={handleMouseOver} mouseOut={handleMouseOut}>
       {isHovering && (
         <Overlay>
           <PlayButton />
@@ -28,7 +28,6 @@ const Movie = ({ item, image, title, trending, width }) => {
       )}
       <Image title={title} image={image} />
       <Bookmark item={item} />
-      <Details item={item} isTrending={trending} />
     </Card>
   );
 };
