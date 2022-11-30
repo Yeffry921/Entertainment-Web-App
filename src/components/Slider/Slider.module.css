@@ -46,20 +46,28 @@
   opacity: 0;
   border-radius: 50%;
   transition: all ease-in 200ms;
-
 }
 .slider-container {
-  position: relative;
+  /* position: relative; */
   white-space: nowrap;
   width: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+.slider-item {
+  width: 250px;
+  display: inline-block;
+  margin-right: 1rem;
+  position: relative;
 }
 
 @media only screen and (min-width: 768px) {
   .container {
     margin-left: 25px;
     margin-right: 25px;
+  }
+  .slider-item {
+    width: 470px;
   }
 }
 
