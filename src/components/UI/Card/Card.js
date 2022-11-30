@@ -7,7 +7,6 @@ const Card = ({ children, mouseOver, mouseOut }) => {
       className={styles["movie-container"]}
       onMouseEnter={mouseOver}
       onMouseLeave={mouseOut}
-      onMous
     >
       {children}
     </div>
