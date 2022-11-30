@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Movie.module.css";
 
-import Bookmark from "../Bookmark/Bookmark";
-import Details from "../UI/Details/Details";
+import Bookmark from "../UI/Bookmark/Bookmark";
 import PlayButton from "../UI/PlayButton/PlayButton";
 import Overlay from "../UI/Overlay/Overlay";
 import Card from "../UI/Card/Card";
@@ -27,7 +26,7 @@ const Movie = ({ item, image, title, trending, width }) => {
         </Overlay>
       )}
       <Image title={title} image={image} />
-      <Bookmark item={item} />
+      <Bookmark isMarked={item.isBookmarked} />
     </Card>
   );
 };
