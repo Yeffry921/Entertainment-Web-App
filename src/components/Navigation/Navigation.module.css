@@ -57,10 +57,10 @@
 
 @media only screen and (min-width: 1025px) {
   .navigation {
-    height: auto;
     align-items: stretch;
-    margin: 20px 25px;
-
+    margin: 20px 15px;
+    height: 96%;
+    position: fixed;
   }
   .navigation .content {
     flex-direction: column;
