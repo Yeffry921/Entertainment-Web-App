@@ -6,10 +6,7 @@ import styles from "./Slider.module.css";
 import ShowcaseHeading from "../ShowcaseHeading/ShowcaseHeading";
 import Details from "../UI/Details/Details";
 
-const Slider = () => {
-  const [movies, setMovies] = useState(
-    data.filter((movie) => movie.isTrending)
-  );
+const Slider = ({content}) => {
   const slideLeft = () => {
     var slider = document.getElementById("slider");
     console.log(slider);
@@ -29,7 +26,7 @@ const Slider = () => {
           size={25}
         />
         <div id="slider" className={styles["slider-container"]}>
-          {movies.map((item, id) => (
+          {content.map((item, id) => (
             <div className={styles["slider-item"]} key={item.title}>
               <Movie
                 item={item}
