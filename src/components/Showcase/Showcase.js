@@ -1,18 +1,14 @@
-import data from "../../data.json";
 import ShowcaseHeading from "../ShowcaseHeading/ShowcaseHeading";
 import Movie from "../Movie/Movie";
 import styles from "./Showcase.module.css";
-import Card from "../UI/Card/Card";
-import Image from "../UI/Image/Image";
 import Details from "../UI/Details/Details";
 
-const Showcase = ({ title }) => {
-  const recommended = data.filter((movie) => movie.isTrending === false);
+const Showcase = ({ title, content }) => {
   return (
     <section className={styles.container}>
       <ShowcaseHeading text={title} />
       <div className={styles.showcase}>
-        {recommended.map((movie) => {
+        {content.map((movie) => {
           return (
             <div className={styles["showcase-item"]} key={movie.title}>
               <Movie
