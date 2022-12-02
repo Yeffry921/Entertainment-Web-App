@@ -1,13 +1,20 @@
 import styles from "../Search/Search.module.css";
 import { ReactComponent as SearchLogo } from "../../assets/icon-search.svg";
 import { useState } from "react";
+import data from "../../data.json";
 
-const Search = ({ getQuery }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-    getQuery(searchTerm)
+const Search = ({ onFiltered, searchInput, setSearchInput }) => {
+  
+  const searchItems = (searchValue) => {
+    setSearchInput(searchValue);
+    if (searchInput !== "") {
+      const filteredData = data.filter((item) => {
+        return item.title.toLowerCase().includes(searchInput.toLowerCase());
+      });
+      onFiltered(filteredData);
+    } else {
+      onFiltered([])
+    }
   };
 
   return (
@@ -20,8 +27,8 @@ const Search = ({ getQuery }) => {
           <input
             type="search"
             placeholder="Search for movies or TV series"
-            onChange={handleSearch}
-            value={searchTerm}
+            onChange={(e) => searchItems(e.target.value)}
+            value={searchInput}
           />
         </div>
       </div>
