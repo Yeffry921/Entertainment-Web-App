@@ -7,27 +7,20 @@ import Showcase from "./components/Showcase/Showcase";
 import data from "./data.json";
 
 const App = () => {
-  const [filteredData, setFilteredData] = useState([])
-  const getQueryTerm = (term) => {
-    searchedItems(term)
-  }
+  const [filteredResults, setFilteredResults] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
 
-  const searchedItems = (searchTerm) => {
-    setTimeout(() => {
-      const filtered = data.filter((items) =>
-        items.title.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredData(filtered)
-    }, 1000);
-  };
-  console.log(filteredData)
-
+  console.log(filteredResults);
   return (
     <main className="App">
       <Navigation />
-      <Search getQuery={getQueryTerm}/>
-      {filteredData ? (
-        <Showcase title="Search Results" content={filteredData}/>
+      <Search
+        onFiltered={setFilteredResults}
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+      />
+      {searchInput.length > 1 ? (
+        <Showcase title={`Found ${filteredResults.length} results for '${searchInput}'`} content={filteredResults} />
       ) : (
         <Outlet />
       )}
