@@ -4,15 +4,13 @@ import styles from "./Bookmark.module.css";
 
 const Bookmark = ({ isMarked }) => {
   return (
-    <div className={styles.hover}>
-      <button className={styles.bookmark}>
-        {isMarked ? (
-          <FaBookmark fill="#FFF" className={styles["bookmark-icon"]} />
-        ) : (
-          <FaRegBookmark fill="#FFF" className={styles["bookmark-icon"]} />
-        )}
-      </button>
-    </div>
+    <button className={styles.bookmark}>
+      {isMarked ? (
+        <FaBookmark fill="#FFF" className={styles["bookmark-icon"]} />
+      ) : (
+        <FaRegBookmark fill="#FFF" className={styles["bookmark-icon"]} />
+      )}
+    </button>
   );
 };
 
