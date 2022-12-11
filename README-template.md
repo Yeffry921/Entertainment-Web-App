@@ -59,7 +59,7 @@ You may also see any lint errors in the console.
 
 ## My process
 
-50% Complete
+60% Complete
 
 ### Built with
 
