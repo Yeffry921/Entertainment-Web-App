@@ -20,7 +20,10 @@ const App = () => {
         setSearchInput={setSearchInput}
       />
       {searchInput.length > 1 ? (
-        <Showcase title={`Found ${filteredResults.length} results for '${searchInput}'`} content={filteredResults} />
+        <Showcase
+          title={`Found ${filteredResults.length} results for '${searchInput}'`}
+          content={filteredResults}
+        />
       ) : (
         <Outlet />
       )}
