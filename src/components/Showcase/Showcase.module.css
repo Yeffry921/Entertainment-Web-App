@@ -6,6 +6,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   position: relative;
+  padding-bottom: 1rem
 }
 .showcase-item {
   width: 100%;
